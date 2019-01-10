@@ -1,9 +1,17 @@
 #!/bin/sh
 cp=$PWD
-imp=""
+cmp=""
+map="const Map = {"
 for i in `seq 1 100`
 do
-    imp="$imp\nimport TestComponent$i from '../components/TestComponent$i'"
+    cmp="$cmp\nimport TestComponent$i from '../components/TestComponent$i'"
+    map="$map\n\t$i: TestComponent$i,"
 done
 
-echo $imp | xclip -sel clip
+map="$map\n}"
+
+IMPORT="
+    $cmp\n\n$map\nexport default Map
+"
+
+echo $IMPORT > import.js

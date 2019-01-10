@@ -12,7 +12,7 @@ do
     \nconst $component = () => (
     \n <p> Hello World!$i</p>
     \n);
-    \n\nexport { $component };
+    \n\nexport default $component;
     "
     echo $COMPONENTFILE >> index.js
 done

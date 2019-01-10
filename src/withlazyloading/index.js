@@ -1,13 +1,5 @@
-import React, { Suspense, Component, lazy } from 'react';
-
-
-const TestComponent1 = lazy(() => import('../components/TestComponent1'));
-
-
-
-const Map = {
-    1: TestComponent1
-}
+import React, { Suspense, Component } from 'react';
+import Map from './import'
 
 
 class WithLazyLoading extends Component {

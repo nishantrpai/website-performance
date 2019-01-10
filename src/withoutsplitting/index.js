@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-
-import TestComponent1 from '../components/TestComponent1'
-
-const Map = {
-    1: TestComponent1
-}
+import Map from './import'
 
 
 class WithoutSplitting extends Component {

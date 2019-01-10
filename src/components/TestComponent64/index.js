@@ -3,4 +3,4 @@ const TestComponent64 = () => (
  <p> Hello World!64</p> 
 ); 
 
-export { TestComponent64 };
+export default TestComponent64;

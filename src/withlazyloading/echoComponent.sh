@@ -1,9 +1,18 @@
 #!/bin/sh
 cp=$PWD
-imp=""
+cmp=""
+map="const Map = {"
 for i in `seq 1 100`
 do
-    imp="$imp\nconst TestComponent$i = React.lazy(() => import('../components/TestComponent$i'));"
+    cmp="$cmp\nconst TestComponent$i = React.lazy(() => import('../components/TestComponent$i'));"
+    map="$map\n\t$i: TestComponent$i,"
 done
 
-echo $imp | xclip -sel clip
+map="$map\n}"
+
+IMPORT="
+    import React from 'react';
+    $cmp\n\n$map\nexport default Map
+"
+
+echo $IMPORT > import.js

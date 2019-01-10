@@ -3,4 +3,4 @@ const TestComponent92 = () => (
  <p> Hello World!92</p> 
 ); 
 
-export { TestComponent92 };
+export default TestComponent92;
