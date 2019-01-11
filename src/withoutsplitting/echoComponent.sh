@@ -2,7 +2,7 @@
 cp=$PWD
 cmp=""
 map="const Map = {"
-for i in `seq 1 100`
+for i in `seq 1 1000`
 do
     cmp="$cmp\nimport TestComponent$i from '../components/TestComponent$i'"
     map="$map\n\t$i: TestComponent$i,"

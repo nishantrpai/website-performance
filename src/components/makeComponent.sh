@@ -1,6 +1,6 @@
 #!/bin/sh
 cp=$PWD
-for i in `seq 1 100`
+for i in `seq 1 1000`
 do
     echo "making $i"
     component="TestComponent$i"
