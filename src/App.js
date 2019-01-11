@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Container from './withlazyloading'
+import Container from './withoutsplitting'
 
 class App extends Component {
   render() {
