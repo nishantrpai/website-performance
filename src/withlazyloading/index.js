@@ -6,8 +6,10 @@ class WithLazyLoading extends Component {
 
 
     getAllTstComponents() {
+        const { start, end } = this.props
         const TestComponents = []
-        for (let i = 1; i <= Object.keys(Map).length; i++) {
+        for (let i = start; i <= end; i++) {
+            console.log(i, end,Map[i])
             let Component = Map[i]
             TestComponents.push(<Component key={i} />);
         }
