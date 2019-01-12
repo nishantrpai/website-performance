@@ -6,8 +6,10 @@ class WithoutSplitting extends Component {
 
 
     getAllTstComponents() {
+        const { start, end } = this.props
         const TestComponents = []
-        for (let i = 1; i <= Object.keys(Map).length; i++) {
+        console.log(start, end)
+        for (let i = start; i <= end; i++) {
             let Component = Map[i]
             TestComponents.push(<Component key={i} />);
         }
